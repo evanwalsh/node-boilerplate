@@ -68,7 +68,9 @@
 /* 0 */
 /***/ function(module, exports) {
 
+// @flow
 
+console.log('Hey, hi.');
 
 /***/ }
 /******/ ]);
