@@ -3,24 +3,32 @@
   "version": "1.0.0",
   "description": "Project Description",
   "main": "build/main.js",
-  "scripts": {
-    "build": "./node_modules/.bin/webpack --config webpack.config.js",
-    "watch": "npm run build -- -w",
-    "flow": "./node_modules/.bin/flow",
-    "style": "./node_modules/.bin/standard-flow src/** webpack.config.js",
-    "lint": "npm run flow; npm run style"
-  },
+  "scripts": {},
   "author": "Evan Walsh <evan@massivedanger.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.9",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
-    "babel-preset-es2016": "^6.16.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-preset-latest": "^6.16.0",
+    "eslint-plugin-flowtype": "^2.29.2",
+    "faucet": "^0.0.1",
     "flow-bin": "^0.37.4",
+    "json-loader": "^0.5.4",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0",
+    "tape": "^4.6.3",
     "standard-flow": "^1.0.0",
-    "webpack": "2.1.0-beta.27"
+    "webpack": "2.2.0-rc.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "standard": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ]
+  }
 }
